@@ -1,0 +1,95 @@
+﻿Booting from MicroSD
+mmc dev 0
+setenv loadaddr 0x82000000
+setenv fdtaddr 0x90000000
+fatload mmc 0:1 ${loadaddr}
+fatload mmc 0:1 ${fdtaddr} fsl-ls1088a-rdb.dtb
+setenv bootargs console=ttyAMA0,115200 root=/dev/mmcblk0p2 rw rootwait
+booti ${loadaddr} - ${fdtaddr}
+
+
+Getting Wi-Fi On EagleNet
+
+
+cat > /etc/wpa_supplicant.conf <<'EOF'
+ctrl_interface=/run/wpa_supplicant
+update_config=1
+
+
+network={
+    ssid="EagleNet"
+    key_mgmt=NONE
+}
+EOF
+
+
+wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+
+
+udhcpc -i wlan0
+
+
+
+
+Flashing 
+mmc dev 0
+fatls mmc 0:1cke
+setenv bootargs 'console=ttyAMA0,115200 earlycon=uart8250,mmio,0x21c0500 root=/dev/mmcblk0p2 rw rootwait'
+fatload mmc 0:1 0x82000000 Image
+fatload mmc 0:1 0x88000000 fsl-ls1088a-rdb.dtb
+booti 0x82000000 - 0x88000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Default Dip Switches 
+SW1[1:8] = 00110001
+SW2[1:8] = 01000000
+SW3[1:8] = 11100010
+SW4[1:8] = 10010011
+SW5[1:8] = 01110000
+
+
+Booting from MicroSD Dip Switches 
+SW1[1:8] = 0010 0000
+SW2[1:8] = 0100 0000
+SW3[1:8] = 1110 0010
+SW4[1:8] = 1001 0011
+SW5[1:8] = 0111 0000
+
+
+Bitbake source environment Commands
+cd ~/yocto-sdk
+. setup-env -m ls1088ardb-pb
+
+
+nano conf/local.conf 
+* Adds firmware
+
+
+bitbake core-image-base
+* Rebuts the image
+
+
+
+LINUX MACHINE COMMANDS FOR FORMATTINGS ROOFTS
+sudo tar --numeric-owner -xzf /media/vboxuser/BOOT/core-image-base-ls1088ardb-pb.rootfs.tar.gz -C /media/vboxuser/ROOTFS
+sync
+sudo umount /media/vboxuser/ROOTFS
+sudo umount /media/vboxuser/BOOT
