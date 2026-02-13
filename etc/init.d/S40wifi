@@ -1,0 +1,18 @@
+#!/bin/sh
+# /etc/init.d/S40wifi
+# Written by Aden Hilderbrand
+
+case "$1" in
+  start)
+    echo "Starting WiFi..."
+    wpa_supplicant -B -Dnl80211 -i wlan0 -c /etc/wpa_supplicant.conf
+    sleep 1
+    udhcpc -i wlan0
+    ;;
+  stop)
+    killall wpa_supplicant
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
