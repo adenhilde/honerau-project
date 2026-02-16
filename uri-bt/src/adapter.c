@@ -78,3 +78,13 @@ bool adapter_init(void)
     return true;
 }
 
+void adapter_set_pairable(bool enable)
+{
+    set_bool_property("Pairable", enable ? 1 : 0);
+}
+
+void adapter_set_discoverable(bool enable)
+{
+    set_bool_property("Discoverable", enable ? 1 : 0);
+}
+

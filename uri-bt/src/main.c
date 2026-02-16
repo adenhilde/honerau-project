@@ -4,6 +4,7 @@
 #include <signal.h>
 #include "adapter.h"
 #include "agent.h"
+#include "gatt.h"
 
 static GMainLoop *loop;
 
@@ -26,6 +27,11 @@ int main(int argc, char *argv[])
 
     if (!agent_init()) {
         g_printerr("Agent init failed\n");
+        return 1;
+    }
+
+    if (!gatt_init()) {
+        g_printerr("GATT init failed\n");
         return 1;
     }
 
