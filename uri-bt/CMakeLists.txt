@@ -18,6 +18,7 @@ add_executable(uri-bt
     src/main.c
     src/adapter.c
     src/agent.c
+    src/gatt.c
 )
 
 target_link_libraries(uri-bt
