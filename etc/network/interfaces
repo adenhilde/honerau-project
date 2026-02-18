@@ -6,7 +6,7 @@ iface lo inet loopback
 # Physical interface
 auto wlan0
 iface wlan0 inet static
-    address 192.168.1.1
+    address 192.168.50.1
         netmask 255.255.255.0
             # Add broadcast if needed
-                broadcast 192.168.1.255
+                broadcast 192.168.50.255
