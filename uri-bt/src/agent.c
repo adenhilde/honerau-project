@@ -87,7 +87,7 @@ static DBusHandlerResult agent_message_handler(DBusConnection *connection,
         const char *device;
         uint32_t passkey;
         DBusError err;
-        char mac[18];   // ✅ DECLARED ONCE, IN SCOPE
+        char mac[18];   //  DECLARED ONCE, IN SCOPE
 
         dbus_error_init(&err);
 
@@ -132,7 +132,7 @@ static DBusHandlerResult agent_message_handler(DBusConnection *connection,
         printf("Accepting pairing from %s\n", mac);
         trust_device(device);
 
-        /* 🔒 LOCK IT DOWN */
+        /* LOCK IT DOWN */
         adapter_set_pairable(false);
         adapter_set_discoverable(false);
         commissioned = true;
