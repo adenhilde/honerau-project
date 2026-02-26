@@ -70,7 +70,7 @@ bool adapter_init(void)
     set_bool_property("Powered", 1);             // 1
     set_bool_property("Discoverable", 1);        // 0
     set_bool_property("Pairable", 1);            // 0
-    //set_string_property("Privacy", "device");    // uncomment
+    set_string_property("Privacy", "device");    // uncomment
     set_string_property("Alias", "Honeywell-URI-Device");
 
 
