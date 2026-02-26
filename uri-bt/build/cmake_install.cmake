@@ -1,4 +1,4 @@
-# Install script for directory: /home/addison/uri-bt
+# Install script for directory: /home/root/uri-bt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/addison/uri-bt/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/root/uri-bt/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
