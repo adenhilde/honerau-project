@@ -1,4 +1,4 @@
-# Install script for directory: /home/yocto-sdk/build-ls1088ardb-pb/uri-bt
+# Install script for directory: /home/yocto-sdk/build_ls1088ardb-pb/uri-bt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yocto-sdk/build-ls1088ardb-pb/uri-bt/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yocto-sdk/build_ls1088ardb-pb/uri-bt/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
