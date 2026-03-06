@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/uri-bt.dir/link.d "CMakeFiles/uri-bt.dir/src/main.c.o" "CMakeFiles/uri-bt.dir/src/adapter.c.o" "CMakeFiles/uri-bt.dir/src/agent.c.o" "CMakeFiles/uri-bt.dir/src/gatt.c.o" "CMakeFiles/uri-bt.dir/src/advertising.c.o" -o uri-bt  -ldbus-1 -ldbus-glib-1 -ldbus-1 -lgobject-2.0 -lglib-2.0 -lglib-2.0 -ldbus-glib-1 -lgobject-2.0 -lglib-2.0
