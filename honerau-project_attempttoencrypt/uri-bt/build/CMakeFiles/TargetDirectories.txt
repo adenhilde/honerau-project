@@ -1,3 +1,0 @@
-/home/nickoakley/honerau-project_attempttoencrypt/uri-bt/build/CMakeFiles/uri-bt.dir
-/home/nickoakley/honerau-project_attempttoencrypt/uri-bt/build/CMakeFiles/edit_cache.dir
-/home/nickoakley/honerau-project_attempttoencrypt/uri-bt/build/CMakeFiles/rebuild_cache.dir
