@@ -12,7 +12,7 @@ static void trust_device(const char *device_path);
 static bool commissioned = false;
 
 static const char *whitelist[] = {
-    "A4:F9:21:74:0B:C2",
+    "C0:6C:0C:10:93:AE",
     NULL
 };
 

@@ -19,6 +19,7 @@ add_executable(uri-bt
     src/adapter.c
     src/agent.c
     src/gatt.c
+    src/advertising.c      # ← ADD THIS LINE
 )
 
 target_link_libraries(uri-bt
@@ -26,4 +27,3 @@ target_link_libraries(uri-bt
     ${DBUS_GLIB_LIBRARIES}
     ${GLIB_LIBRARIES}
 )
-
